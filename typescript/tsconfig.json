@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "target": "es2017",
+      "module": "esnext",
+      "lib": ["ES2015", "dom"],
+      "outDir": "out",
+      "sourceMap": true,
+      "moduleResolution": "node"
+    }
+}
+  
