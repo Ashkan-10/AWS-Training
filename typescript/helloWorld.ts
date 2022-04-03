@@ -30,37 +30,104 @@
 // // remove the last item
 // seaCreatures.pop();
 // console.log(seaCreatures);
-
+//--------------------------
 //Define Variable
 // let a = 8
 // let b = 10
 // let c = a + b
 // console.log(c)
+//---------------------
+// let arr = [1,2,3,4,5];
+// for (let i of arr)
+// {
+//     console.log(i);
+// }
 
-let arr = [1,2,3,4,5];
-for (let i of arr)
-{
-    console.log(i);
-}
+// let dic = {name:'ashkan', age: 29, fav:['red', 'blue']};
 
-let dic = {name:'ashkan', age: 29, fav:['red', 'blue']};
+// console.log(dic['fav'][0]);
+// console.log(dic['name'])
+// for (let key in dic)
+// {
+//     console.log(dic[key])
+// }
 
-console.log(dic['fav'][0]);
-console.log(dic['name'])
-for (let key in dic)
-{
-    console.log(dic[key])
-}
+// let dic1 = {colour:'pink', size:[10,5]};
+// console.log(dic1['size'])
 
-let dic1 = {colour:'pink', size:[10,5]};
-console.log(dic1['size'])
-
-for (let h in dic1)
-{
-    console.log(dic1[h])
+// for (let h in dic1)
+// {
+//     console.log(dic1[h])
     
+// }
+
+// console.log(dic1['size'][0]);
+// let arr2 = dic1['size']
+// console.log (arr2)
+
+//-----------------
+
+// let a = 10, b = 40, c = 40;
+// if (c>b) 
+// {
+//     console.log(c + ' is greater than ' + b);
+//     console.log(`${c} is greater than ${b}`);
+// }
+// else if (b>c)
+// {
+//     console.log(`${b} is greater than ${c}`);
+// }
+// else
+// {
+//     console.log('no idea');
+// }
+
+//-------------------
+
+// const msg = 'word';
+// let a = 2;
+// a = a+2;
+
+//-------------------
+// Void function - means no return value, use capital
+
+// function Add()
+// {
+//     console.log('I add values');
+// }
+
+// Add();
+
+//--------------------
+
+// Function that accepts one value
+
+// function Print(msg:string)
+// {
+//     console.log(`Hello ${msg}`);
+// }
+
+// Print('ashkan');
+
+//-----------------------------
+
+// function accepts multiple values
+// function AddValue(a:number, b:number)
+// {
+//     console.log(`Result is ${a+b}`);
+// }
+
+// AddValue(5,6);
+
+//-------------------------
+
+//function that returns value
+function AddValue(a:number, b:number):number
+{
+    let result = a+b;
+    return result;
+   
 }
 
-console.log(dic1['size'][0]);
-let arr2 = dic1['size']
-console.log (arr2)
+let result = AddValue(5,6);
+console.log(`Result is ${result}`);
