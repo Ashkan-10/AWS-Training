@@ -93,10 +93,120 @@
 // }
 // AddValue(5,6);
 //-------------------------
-//function that returns value
-function AddValue(a, b) {
-    var result = a + b;
-    return result;
+// //function that returns value
+// function AddValue(a:number, b:number):number
+// {
+//     let result = a+b;
+//     return result;
+// }
+// let result = AddValue(5,6);
+// console.log(`Result is ${result}`);
+// //---------------------
+// //function that returns value alternate method
+// let AddValue2 = function(a:number, b:number):number
+// {
+//     let result = a+b;
+//     return result;
+// }
+// let result2 = AddValue2(5,6)
+// class Employee {
+//     readonly name: string;
+//     readonly age: number;
+//     constructor(name1: string, age1: number) {
+//         this.age = age1;
+//         this.name = name1;
+//     }
+//     print (){
+//         console.log(`${this.name} is ${this.age} years of age`)
+//     }
+// }
+// let employeeObj = new Employee ("Ashkan", 30);
+// // obj.name = "saeid";
+// employeeObj.print();
+// function printName(obj:Employee){
+//     obj.print();
+// }
+// let employee = new Employee("Saeid", 57);
+// printName(employee);
+// class Calc{
+//     x:number;
+//     constructor(x:number){
+//         this.x = x;
+//     }
+//     equation():number{
+//         let equ = (this.x)**2 + this.x;
+//         return equ;
+//     }
+// }
+// function addOffset(calcObj:Calc, offset:number):number{
+//     let equ = calcObj.equation() + offset;
+//     return equ;
+// }
+// let calcObj = new Calc (3);
+// let finalEquation = addOffset(calcObj, 5);
+// console.log(finalEquation);
+// function functionCalc(x:number):number{
+//     let number = x**3 + x**2 + x + 10;
+//     return number;
+//     }
+// let answer:number = functionCalc(2);
+// console.log(answer);
+// class Point{
+//     x:number;
+//     y:number;
+//     constructor (x:number, y:number){
+//         this.x=x;
+//         this.y=y;
+//     }
+//     area():number{
+//         let area=this.x * this.y;
+//         return area;
+//     }
+// }
+// let point = new Point(2,5);
+// let area = point.area();
+// console.log(area);
+// function perimiter(x:number, y:number):number{
+//    let perimiter = x+y;
+//    return perimiter; 
+// }
+// let perm = perimiter (3,5);
+// console.log(perm);
+// class Calc {
+//     static print(){
+//         console.log("hello world");
+//     }
+// }
+// Calc.print()
+var arrX = [1, 2, 3];
+var arrY = [4, 5, 6];
+for (var _i = 0, arrX_1 = arrX; _i < arrX_1.length; _i++) {
+    var x = arrX_1[_i];
+    for (var _a = 0, arrY_1 = arrY; _a < arrY_1.length; _a++) {
+        var y = arrY_1[_a];
+        console.log(x * y);
+    }
 }
-var result = AddValue(5, 6);
-console.log("Result is ".concat(result));
+// inheritence
+// class Point {
+//   x: number;
+//   y: number;
+//   constructor(x: number, y: number) {
+//     this.x = x;
+//     this.y = y;
+//   }
+//   add(point: Point) {
+//     return new Point(this.x + point.x, this.y + point.y);
+//   }
+// }
+// class Point3D extends Point {
+//   z: number;
+//   constructor(x: number, y: number, z: number) {
+//     super(x, y);
+//     this.z = z;
+//   }
+//   add(point: Point3D) {
+//     var point2D = super.add(point);
+//     return new Point3D(point2D.x, point2D.y, this.z + point.z);
+//   }
+// }
