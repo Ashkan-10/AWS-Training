@@ -1,6 +1,21 @@
 // console.log("Hello World");
 // let a = 2;
 // console.log(a);
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 // // --------------------------------------------
 // // if we add an item and accidentally skip an index, it will create an undefined item in the array.
 // let seaCreatures = ["octopus", "squid", "shark", "seahorse", "starfish"];
@@ -41,7 +56,7 @@
 // console.log(dic['name'])
 // for (let key in dic)
 // {
-//     console.log(dic[key])
+//     console.log(dic[key])                
 // }
 // let dic1 = {colour:'pink', size:[10,5]};
 // console.log(dic1['size'])
@@ -178,15 +193,48 @@
 //     }
 // }
 // Calc.print()
-var arrX = [1, 2, 3];
-var arrY = [4, 5, 6];
-for (var _i = 0, arrX_1 = arrX; _i < arrX_1.length; _i++) {
-    var x = arrX_1[_i];
-    for (var _a = 0, arrY_1 = arrY; _a < arrY_1.length; _a++) {
-        var y = arrY_1[_a];
-        console.log(x * y);
+// let arrX = [1,2,3];
+// let arrY = [4,5,6];
+// for (let x of arrX){
+//     for (let y of arrY){
+//         console.log(x*y)
+//     }
+// }
+var Point2D = /** @class */ (function () {
+    function Point2D(x, y) {
+        this.x = x;
+        this.y = y;
     }
-}
+    Point2D.prototype.add2D = function () {
+        var add = this.x + this.y;
+        return add;
+    };
+    return Point2D;
+}());
+var Point3D = /** @class */ (function (_super) {
+    __extends(Point3D, _super);
+    function Point3D(x, y, z) {
+        var _this = _super.call(this, x, y) || this;
+        _this.z = z;
+        return _this;
+    }
+    Point3D.prototype.add3D = function () {
+        var add = this.x + this.y + this.z;
+        return add;
+    };
+    return Point3D;
+}(Point2D));
+var point3Dobj = new Point3D(10, 20, 30);
+var result3D = point3Dobj.add3D();
+var result2D = point3Dobj.add2D();
+console.log(result3D);
+console.log(result2D);
+// let point2DObj = new Point2D(10,20);
+// let result = point2DObj.add();
+// console.log(result);
+// point2DObj.x = 40;
+// point2DObj.y = 50
+// console.log(point2DObj.add());
 // inheritence
 // class Point {
 //   x: number;

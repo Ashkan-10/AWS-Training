@@ -49,7 +49,7 @@
 // console.log(dic['name'])
 // for (let key in dic)
 // {
-//     console.log(dic[key])
+//     console.log(dic[key])                
 // }
 
 // let dic1 = {colour:'pink', size:[10,5]};
@@ -235,14 +235,64 @@
 
 // Calc.print()
 
-let arrX = [1,2,3];
-let arrY = [4,5,6];
-for (let x of arrX){
-    for (let y of arrY){
-        console.log(x*y)
+// let arrX = [1,2,3];
+// let arrY = [4,5,6];
+// for (let x of arrX){
+//     for (let y of arrY){
+//         console.log(x*y)
+//     }
+// }
+   
+
+
+class Point2D{
+    x:number;
+    y:number;
+
+    constructor (x:number, y:number){
+        this.x=x;
+        this.y=y;
+
+    }
+    add2D():number{
+        let add=this.x + this.y;
+        return add;
+    }
+    
+}
+
+class Point3D extends Point2D {
+    z:number;
+    x:number;
+    y:number;
+
+    constructor (x:number, y:number, z:number){
+        super(x,y);
+        this.z=z;
+    }
+    add3D():number{
+        let add=this.x + this.y + this.z;
+        return add;
     }
 }
-   
+
+let point3Dobj = new Point3D(10,20,30);
+let result3D = point3Dobj.add3D();
+let result2D = point3Dobj.add2D();
+
+console.log(result3D);
+console.log(result2D);
+
+
+// let point2DObj = new Point2D(10,20);
+// let result = point2DObj.add();
+// console.log(result);
+// point2DObj.x = 40;
+// point2DObj.y = 50
+// console.log(point2DObj.add());
+
+
+
 
 
 
@@ -274,3 +324,5 @@ for (let x of arrX){
 //     return new Point3D(point2D.x, point2D.y, this.z + point.z);
 //   }
 // }
+
+
