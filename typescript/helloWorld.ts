@@ -245,53 +245,51 @@
    
 
 
-class Point2D{
-    x:number;
-    y:number;
+// class Point2D{
+//     x:number;
+//     y:number;
 
-    constructor (x:number, y:number){
-        this.x=x;
-        this.y=y;
+//     constructor (x:number, y:number){
+//         this.x=x;
+//         this.y=y;
 
-    }
-    add2D():number{
-        let add=this.x + this.y;
-        return add;
-    }
+//     }
+//     add2D():number{
+//         let add=this.x + this.y;
+//         return add;
+//     }
     
-}
+// }
 
-class Point3D extends Point2D {
-    z:number;
-    x:number;
-    y:number;
+// class Point3D extends Point2D {
+//     z:number;
+//     x:number;
+//     y:number;
 
-    constructor (x:number, y:number, z:number){
-        super(x,y);
-        this.z=z;
-    }
-    add3D():number{
-        let add=this.x + this.y + this.z;
-        return add;
-    }
-}
+//     constructor (x:number, y:number, z:number){
+//         super(x,y);
+//         this.z=z;
+//     }
+//     add3D():number{
+//         let add=this.x + this.y + this.z;
+//         return add;
+//     }
+// }
 
-let point3Dobj = new Point3D(10,20,30);
-let result3D = point3Dobj.add3D();
-let result2D = point3Dobj.add2D();
+// let point3Dobj = new Point3D(10,20,30);
+// let result3D = point3Dobj.add3D();
+// let result2D = point3Dobj.add2D();
 
-console.log(result3D);
-console.log(result2D);
-
-
-// let point2DObj = new Point2D(10,20);
-// let result = point2DObj.add();
-// console.log(result);
-// point2DObj.x = 40;
-// point2DObj.y = 50
-// console.log(point2DObj.add());
+// console.log(result3D);
+// console.log(result2D);
 
 
+// // let point2DObj = new Point2D(10,20);
+// // let result = point2DObj.add();
+// // console.log(result);
+// // point2DObj.x = 40;
+// // point2DObj.y = 50
+// // console.log(point2DObj.add());
 
 
 
@@ -301,9 +299,11 @@ console.log(result2D);
 
 
 
-// inheritence
-// class Point {
-//   x: number;
+
+
+// // inheritence
+// // class Point {
+// //   x: number;
 //   y: number;
 //   constructor(x: number, y: number) {
 //     this.x = x;
@@ -326,3 +326,108 @@ console.log(result2D);
 // }
 
 
+// let x=10
+// let y=20
+
+// console.log(`sum is: ${x+y}`)
+
+
+// let n=11
+// if (n>10){
+//     console.log('your number is more than 10');
+// } else if (n<10) {
+//     console.log('your number is less than 10');
+// } else {
+//     console.log('your number is equal to 10')
+// }
+
+
+// let arr = [1,2,3,4,5];
+// for(var i of arr) {
+//     console.log(i);
+// }
+// for (var i=0; i<arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+// let dic = {name:'ashkan', age: 29}
+// console.log(dic['name'])
+
+
+
+// function add(x:number, y:number):number {
+//     return x+y
+// }
+// let z = add(10, 20);
+// console.log(z);
+
+class Person{
+    name:string;
+    age:number;
+
+    constructor(name:string, age:number) {
+        this.name=name;
+        this.age=age;
+    }
+
+    message(){
+        console.log(`${this.name} is ${this.age} years old`);
+    }
+    
+}
+
+let p =new Person('ashkan', 29);
+
+p.message();
+
+p.name='saeid';
+p.age=56;
+p.message();
+
+class student extends Person{
+    student_number:number;
+
+    constructor(name:string, age:number, student_number:number) {
+        super(name, age);
+        this.student_number=student_number;
+    }
+    studentMessage(){
+        console.log(`${this.name} is ${this.age} years old with student number ${this.student_number}`);
+    }
+
+}
+
+let s=new student('ashkan', 29, 123);
+s.studentMessage();
+s.message();
+
+
+
+interface IEmployee{
+    name:string;
+    age:number;
+
+    message();
+}
+class Employee implements IEmployee{
+    name:string;
+    age:number;
+
+    constructor(name:string, age:number) {
+        this.name=name;
+        this.age=age;
+    }
+
+    message(){
+        console.log(`${this.name} is ${this.age} years old`);
+    }
+    
+}
+
+
+function helloEmployee(emp:IEmployee){
+    console.log(emp.message());
+}
+
+let emp= new Employee('ashkan',29);
+helloEmployee(emp)

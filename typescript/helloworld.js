@@ -200,44 +200,45 @@ var __extends = (this && this.__extends) || (function () {
 //         console.log(x*y)
 //     }
 // }
-var Point2D = /** @class */ (function () {
-    function Point2D(x, y) {
-        this.x = x;
-        this.y = y;
-    }
-    Point2D.prototype.add2D = function () {
-        var add = this.x + this.y;
-        return add;
-    };
-    return Point2D;
-}());
-var Point3D = /** @class */ (function (_super) {
-    __extends(Point3D, _super);
-    function Point3D(x, y, z) {
-        var _this = _super.call(this, x, y) || this;
-        _this.z = z;
-        return _this;
-    }
-    Point3D.prototype.add3D = function () {
-        var add = this.x + this.y + this.z;
-        return add;
-    };
-    return Point3D;
-}(Point2D));
-var point3Dobj = new Point3D(10, 20, 30);
-var result3D = point3Dobj.add3D();
-var result2D = point3Dobj.add2D();
-console.log(result3D);
-console.log(result2D);
-// let point2DObj = new Point2D(10,20);
-// let result = point2DObj.add();
-// console.log(result);
-// point2DObj.x = 40;
-// point2DObj.y = 50
-// console.log(point2DObj.add());
-// inheritence
-// class Point {
-//   x: number;
+// class Point2D{
+//     x:number;
+//     y:number;
+//     constructor (x:number, y:number){
+//         this.x=x;
+//         this.y=y;
+//     }
+//     add2D():number{
+//         let add=this.x + this.y;
+//         return add;
+//     }
+// }
+// class Point3D extends Point2D {
+//     z:number;
+//     x:number;
+//     y:number;
+//     constructor (x:number, y:number, z:number){
+//         super(x,y);
+//         this.z=z;
+//     }
+//     add3D():number{
+//         let add=this.x + this.y + this.z;
+//         return add;
+//     }
+// }
+// let point3Dobj = new Point3D(10,20,30);
+// let result3D = point3Dobj.add3D();
+// let result2D = point3Dobj.add2D();
+// console.log(result3D);
+// console.log(result2D);
+// // let point2DObj = new Point2D(10,20);
+// // let result = point2DObj.add();
+// // console.log(result);
+// // point2DObj.x = 40;
+// // point2DObj.y = 50
+// // console.log(point2DObj.add());
+// // inheritence
+// // class Point {
+// //   x: number;
 //   y: number;
 //   constructor(x: number, y: number) {
 //     this.x = x;
@@ -258,3 +259,58 @@ console.log(result2D);
 //     return new Point3D(point2D.x, point2D.y, this.z + point.z);
 //   }
 // }
+// let x=10
+// let y=20
+// console.log(`sum is: ${x+y}`)
+// let n=11
+// if (n>10){
+//     console.log('your number is more than 10');
+// } else if (n<10) {
+//     console.log('your number is less than 10');
+// } else {
+//     console.log('your number is equal to 10')
+// }
+// let arr = [1,2,3,4,5];
+// for(var i of arr) {
+//     console.log(i);
+// }
+// for (var i=0; i<arr.length; i++) {
+//     console.log(arr[i]);
+// }
+// let dic = {name:'ashkan', age: 29}
+// console.log(dic['name'])
+// function add(x:number, y:number):number {
+//     return x+y
+// }
+// let z = add(10, 20);
+// console.log(z);
+var Person = /** @class */ (function () {
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.message = function () {
+        console.log("".concat(this.name, " is ").concat(this.age, " years old"));
+    };
+    return Person;
+}());
+var p = new Person('ashkan', 29);
+p.message();
+p.name = 'saeid';
+p.age = 56;
+p.message();
+var student = /** @class */ (function (_super) {
+    __extends(student, _super);
+    function student(name, age, student_number) {
+        var _this = _super.call(this, name, age) || this;
+        _this.student_number = student_number;
+        return _this;
+    }
+    student.prototype.studentMessage = function () {
+        console.log("".concat(this.name, " is ").concat(this.age, " years old with student number ").concat(this.student_number));
+    };
+    return student;
+}(Person));
+var s = new student('ashkan', 29, 123);
+s.studentMessage();
+s.message();
