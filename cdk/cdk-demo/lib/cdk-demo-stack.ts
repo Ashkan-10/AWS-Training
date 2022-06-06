@@ -27,6 +27,13 @@ export class CdkDemoStack extends Stack {
             // a public subnet. There are other options available here.
             subnetType: SubnetType.PUBLIC
           },
+          {
+            // Private Subnet with NAT:
+            cidrMask: 24,
+            name: 'private-subnet',
+            subnetType: SubnetType.PRIVATE_WITH_NAT
+
+          }
         ]
       });
     
