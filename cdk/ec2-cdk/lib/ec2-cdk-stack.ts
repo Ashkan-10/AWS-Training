@@ -1,5 +1,6 @@
 import { Stack, StackProps, aws_ec2 as ec2, aws_iam as iam } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
+import { readFileSync } from 'fs';
 // import * as sqs from 'aws-cdk-lib/aws-sqs';
 
 export class Ec2CdkStack extends Stack {
@@ -60,8 +61,14 @@ export class Ec2CdkStack extends Stack {
     machineImage: new ec2.AmazonLinuxImage({
       generation: ec2.AmazonLinuxGeneration.AMAZON_LINUX_2
     }),
-    keyName: 'ashkan-keypair'
+    keyName: 'ashkan-keypair',
   });
+  // load content to script
+  const userDataScript = readFileSync('./lib/user-data.sh' , 'utf8')
+  // add the User Data script to the Instance
+  ec2Instance.addUserData(userDataScript)
+
+
 
 
   }
