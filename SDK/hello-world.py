@@ -80,8 +80,43 @@
 # full_name = ' '.join([name,family])
 # print(full_name)
 
-people = [{'name':'saeid'}, {'name':'ashkan'}]
-for person in people:
-    print(person['name'])
+# people = [{'name':'saeid'}, {'name':'ashkan'}]
+# for person in people:
+#     print(person['name'])
 
+# # Creating Class
+# class Student:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#     def print_family_name(self):
+#         print(f"{self.name} is {self.age} years old")
     
+
+# stu = Student ('ashkan', 30)
+# stu.print_family_name()
+
+# stu2 = Student('saeid', 56)
+# stu2.age = 57
+# stu2.print_family_name()
+
+# Stack implementation, pop removes last element, LIFO (last in first out):
+# stack = []
+# stack.append('a')
+# stack.append('b')
+# stack.append('c')
+# print(stack)
+# print(stack.pop())
+# print(stack)
+
+#Queue implementation, FIFO (first in, first out):
+
+# import queue
+# q = queue.Queue (maxsize = 3)
+from queue import Queue
+q = Queue (maxsize = 3)
+q.put('a')
+q.put('b')
+q.put('c')
+print(q.full())
+print(q.get())
