@@ -113,10 +113,24 @@
 
 # import queue
 # q = queue.Queue (maxsize = 3)
-from queue import Queue
-q = Queue (maxsize = 3)
-q.put('a')
-q.put('b')
-q.put('c')
-print(q.full())
-print(q.get())
+# from queue import Queue
+# q = Queue (maxsize = 3)
+# q.put('a')
+# q.put('b')
+# q.put('c')
+# print(q.full())
+# print(q.get())
+
+
+# Input from command line: python hello-world.py 10 5
+import sys
+def addvalue (x:int,y:int):
+    return(x+y)
+
+x = int(sys.argv[1])
+y = int(sys.argv[2])
+
+z = addvalue(x,y)
+print(z)
+
+
