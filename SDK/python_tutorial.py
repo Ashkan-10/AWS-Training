@@ -122,15 +122,93 @@
 # print(q.get())
 
 
-# Input from command line: python hello-world.py 10 5
-import sys
-def addvalue (x:int,y:int):
-    return(x+y)
+# # Input from command line: python hello-world.py 10 5
+# import sys
+# def addvalue (x:int,y:int):
+#     return(x+y)
 
-x = int(sys.argv[1])
-y = int(sys.argv[2])
+# x = int(sys.argv[1])
+# y = int(sys.argv[2])
 
-z = addvalue(x,y)
-print(z)
+# z = addvalue(x,y)
+# print(z)
 
 
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+        
+#     def area(self):
+#         return self.width * self.height
+    
+#     def perimeter(self):
+#         return 2 * (self.width + self.height)
+
+# r1 = Rectangle(10, 20)
+# area = r1.area()
+# per = r1.perimeter()
+# print(area)
+# print(per)
+
+
+# Rectangle class creation and factory method for rectangle class
+
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+
+#     def area (self):
+#         return self.width * self.height
+
+#     def perimeter(self):
+#         return (self.width + self.height) * 2
+    
+# r = Rectangle(5, 10)
+# area = r.area()
+# perimeter = r.perimeter()
+# print(area, perimeter, r.height)
+
+# Factory Method:
+
+# def rectangleFactory(width, height):
+#     return Rectangle(width, height)
+
+# r1 = rectangleFactory(5, 10)
+# print(r1.area(), r1.perimeter(), r1.height)
+
+
+
+# class MyMath:
+#     def __init__(self, x, y):
+#         self.x = x
+#         self.y = y
+#     def add(self):
+#         return (self.x + self.y)
+
+#     def subtract(self):
+#         return (self.x - self.y)
+
+# m = MyMath(1, 2)
+# print(m.x, m.y, m.add(), m.subtract())
+
+# def mathFactory(x, y):
+#     return MyMath(x, y)
+
+# m1 = mathFactory(5, 10)
+# print(m1.add(), m1.subtract(), m1.x, m1.y)
+
+
+# Exercise Dictionary and Array
+arr = [{'Colour':['Blue','Green'], 'Name':'Ashkan'},{'Colour':['Red','Yellow'], 'Name':'Saeid'}]
+# print(arr[1])
+# print(arr[0]['Name'])
+# print(arr[0]['Colour'])
+# print(arr[0]['Colour'][0])
+
+for item in arr:
+    print(item['Name'])
+    # print(item['Colour'])
+    for colour in item['Colour']:
+        print(colour)
